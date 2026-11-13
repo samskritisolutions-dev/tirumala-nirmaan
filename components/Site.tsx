@@ -148,7 +148,9 @@ export default function Site() {
 
   return <MotionConfig reducedMotion="user"><main>
     <header className="header">
-      <a className="brand" href="#top" aria-label="Thirumala home"><span className="brand-mark">T<span>.</span></span><span className="brand-name">THIRUMALA<small>CONSTRUCTIONS & DEVELOPERS</small></span></a>
+      <a className="brand" href="#top" aria-label="Thirumala home">
+        <img src="/logo.svg" alt="Thirumala Constructions & Developers" className="brand-logo" width="160" height="54" />
+      </a>
       <nav className="desktop-nav">{nav.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav>
       <a className="header-cta" href="#contact">Contact Us <ArrowUpRight size={16}/></a>
       <button className="menu-toggle" aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X/> : <Menu/>}</button>
@@ -378,9 +380,8 @@ export default function Site() {
 
     <footer className="footer">
       <div className="footer-top">
-        <a className="brand brand-footer" href="#top">
-          <span className="brand-mark">T<span>.</span></span>
-          <span className="brand-name">THIRUMALA<small>CONSTRUCTIONS & DEVELOPERS</small></span>
+        <a className="brand brand-footer" href="#top" aria-label="Thirumala home">
+          <img src="/logo-white.svg" alt="Thirumala Constructions & Developers" className="brand-logo brand-logo-footer" width="175" height="60" />
         </a>
         <p>Building trust. Creating landmarks. Shaping tomorrow.</p>
       </div>

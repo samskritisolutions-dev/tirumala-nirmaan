@@ -52,6 +52,22 @@ select {
   display: flex;
   align-items: center;
   gap: 11px;
+  text-decoration: none;
+}
+.brand-logo {
+  height: 52px;
+  width: auto;
+  max-width: 175px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.brand:hover .brand-logo {
+  transform: scale(1.02);
+}
+.brand-logo-footer {
+  height: 58px;
+  max-width: 195px;
 }
 .brand-mark {
   font:
@@ -1355,6 +1371,14 @@ h3 em {
   }
   .header {
     height: 72px;
+  }
+  .brand-logo {
+    height: 44px;
+    max-width: 145px;
+  }
+  .brand-logo-footer {
+    height: 48px;
+    max-width: 160px;
   }
   .brand-mark {
     font-size: 34px;
