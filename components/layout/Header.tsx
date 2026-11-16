@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface HeaderProps {
   isDetailPage?: boolean;
-  activeNav?: "home" | "about" | "expertise" | "projects" | "testimonials";
+  activeNav?: "home" | "about" | "expertise" | "projects" | "testimonials" | "contact";
 }
 
 export default function Header({ isDetailPage = false, activeNav }: HeaderProps) {
@@ -19,6 +19,7 @@ export default function Header({ isDetailPage = false, activeNav }: HeaderProps)
     { label: "Expertise", href: "/#expertise", id: "expertise" },
     { label: "Projects", href: "/projects", id: "projects" },
     { label: "Testimonials", href: "/testimonials", id: "testimonials" },
+    { label: "Contact", href: "/contact", id: "contact" },
   ];
 
   return (
@@ -55,19 +56,14 @@ export default function Header({ isDetailPage = false, activeNav }: HeaderProps)
               <ArrowLeft size={16} />
               <span>All Projects</span>
             </Link>
-            <a
-              className="header-cta"
-              href="https://wa.me/919849306675?text=Hello%20Thirumala%20Team%2C%20I%20would%20like%20to%20enquire%20about%20your%20projects"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className="header-cta" href="/contact">
               Enquire Now <ArrowUpRight size={16} />
-            </a>
+            </Link>
           </div>
         ) : (
-          <a className="header-cta" href="/#contact">
+          <Link className="header-cta" href="/contact">
             Contact Us <ArrowUpRight size={16} />
-          </a>
+          </Link>
         )}
 
         <button
@@ -99,21 +95,21 @@ export default function Header({ isDetailPage = false, activeNav }: HeaderProps)
               </Link>
             ))}
             {isDetailPage ? (
-              <a
-                href="#enquiry"
+              <Link
+                href="/contact"
                 className="mobile-cta"
                 onClick={() => setMenuOpen(false)}
               >
                 Enquire About Project <ArrowUpRight size={16} />
-              </a>
+              </Link>
             ) : (
-              <a
-                href="/#contact"
+              <Link
+                href="/contact"
                 className="mobile-cta"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact Us <ArrowUpRight size={16} />
-              </a>
+              </Link>
             )}
           </motion.nav>
         )}
