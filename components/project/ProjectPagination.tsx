@@ -16,7 +16,7 @@ export const ProjectPagination: React.FC<ProjectPaginationProps> = ({ prevProjec
           <span className="pagination-kicker">PORTFOLIO NAVIGATION</span>
           <p className="pagination-subhead">Explore adjacent residential & commercial developments</p>
         </div>
-        <Link href="/#projects" className="all-projects-capsule">
+        <Link href="/projects" className="all-projects-capsule">
           <LayoutGrid size={15} />
           <span>All 13 Projects</span>
           <ArrowUpRight size={14} />

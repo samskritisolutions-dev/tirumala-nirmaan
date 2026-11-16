@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -48,9 +49,9 @@ export default function AboutSection() {
             Backed by experienced professionals and technically qualified teams, we focus on quality construction,
             cost-effective ideas and optimum use of resources.
           </p>
-          <a className="text-link" href="#contact">
-            Get to know us <ArrowUpRight size={16} />
-          </a>
+          <Link className="text-link" href="/about">
+            Read our full story &amp; leadership <ArrowUpRight size={16} />
+          </Link>
         </Reveal>
       </div>
 
